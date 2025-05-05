@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import styles from '../styles/components-styles/navigation.module.css';
 
 const Navigation = () => {
   const path = usePathname();
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul>
         <li>
           <Link href="/">Home</Link>
