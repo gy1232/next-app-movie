@@ -1,7 +1,7 @@
-import { API_URL } from '../../../../(home)/page';
 import { IParams } from '../page';
 import styles from '../../../../../styles/pages-styles/similar.module.css';
 import { getMovie } from '../../../../../components/movie-info';
+import { API_URL } from '../../../../contants';
 
 const getSimilar = async (id: string) => {
   const response = await fetch(`${API_URL}/${id}/similar`);
