@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { API_URL } from '../app/(home)/page';
 import styles from '../styles/components-styles/movie-info.module.css';
 
@@ -25,6 +26,7 @@ const MovieInfo = async ({ id }: { id: string }) => {
         <a href={movie.homepage} target={'_blank'}>
           Homepage &rarr;
         </a>
+        <Link href={`/movies/${id}/similar`}>Similar &rarr;</Link>
       </div>
     </div>
   );
