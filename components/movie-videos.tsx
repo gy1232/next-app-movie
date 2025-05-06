@@ -1,4 +1,4 @@
-import { API_URL } from '../app/contants';
+import { API_URL } from '../lib/contants';
 import styles from '../styles/components-styles/movie-videos.module.css';
 
 const getVideos = async (id: string) => {
