@@ -1,14 +1,16 @@
-import { IParams } from '../page';
 import styles from '../../../../../styles/pages-styles/similar.module.css';
 import { getMovie } from '../../../../../components/movie-info';
 import { API_URL } from '../../../../contants';
+
+type PageParams = Promise<{ id: string }>;
 
 const getSimilar = async (id: string) => {
   const response = await fetch(`${API_URL}/${id}/similar`);
   return response.json();
 };
 
-const SimilarPage = async ({ params: { id } }: IParams) => {
+const SimilarPage = async ({ params }: { params: PageParams }) => {
+  const { id } = await params;
   const similars = await getSimilar(id);
   const movie = await getMovie(id);
   return (
