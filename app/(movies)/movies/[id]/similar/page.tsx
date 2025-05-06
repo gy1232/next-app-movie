@@ -1,6 +1,6 @@
 import styles from '../../../../../styles/pages-styles/similar.module.css';
 import { getMovie } from '../../../../../components/movie-info';
-import { API_URL } from '../../../../contants';
+import API_URL from '../../../../contants';
 
 type PageParams = Promise<{ id: string }>;
 
